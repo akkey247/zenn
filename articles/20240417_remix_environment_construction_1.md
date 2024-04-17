@@ -1,5 +1,5 @@
 ---
-title: "Remix環境構築: 1. Dockerコンテナ作成、Remixのインストール～表示まで"
+title: "Remix環境構築①: Dockerコンテナ作成、Remixのインストール～表示まで"
 emoji: "😸"
 type: "tech"
 topics: [Remix]

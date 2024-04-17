@@ -1,5 +1,5 @@
 ---
-title: "Remix環境構築: 2. Storybookのインストール～表示まで"
+title: "Remix環境構築②: Storybookのインストール～表示まで"
 emoji: "😸"
 type: "tech"
 topics: [Remix,Storybook]
