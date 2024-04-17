@@ -99,5 +99,7 @@ $ docker-compose exec app npm run dev
 
 # 次の記事へ
 
-この記事では、Dockerコンテナの作成とRemixのインストールまでを行いました。  
-次の記事ではStorybookのインストールを行います。  
+この記事では、Dockerコンテナの作成とRemixのインストールから表示までを行いました。  
+次の記事ではStorybookのインストールから表示までを行います。  
+
+https://zenn.dev/akkey247/articles/20240417_remix_environment_construction_2
