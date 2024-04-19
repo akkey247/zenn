@@ -1,12 +1,14 @@
 ---
 title: "Remix環境構築②: Storybookのインストール～表示まで"
-emoji: "😸"
+emoji: "😺"
 type: "tech"
 topics: [Remix,Storybook]
 published: true
 ---
 
-#　はじめに
+# はじめに
+
+この記事は、Docker上に Remix + Storybook + MUI の環境を構築する手順をまとめています。  
 
 この記事は下記の記事からの続きです。  
 https://zenn.dev/akkey247/articles/20240417_remix_environment_construction_1
@@ -14,9 +16,40 @@ https://zenn.dev/akkey247/articles/20240417_remix_environment_construction_1
 この記事の内容は下記の記事をかなり参考にしました。  
 https://zenn.dev/m_ryosuke/articles/868eacfc1870c0
 
+# 現在の状態
+
+前の記事では、Dockerコンテナの作成とコンテナ内にRemixをインストールを行いました。  
+現在下記のようなファイル構成となっています。(Remixのバージョンなどによっても違うかも)  
+`myapp` ディレクトリがコンテナと同期しているディレクトリで Remix のルートディレクトリになっています。  
+基本 `myapp` の中の操作になるのでファイルパスを書くときは `myapp` は無視してます。  
+
+```
+/
+├- docker-compose.yml
+└- myapp/
+　　├- app/
+　　│ 　├- routes/
+　　│ 　│ 　└- _index.tsx
+　　│ 　├- entry.server.tsx
+　　│ 　├- entry.client.tsx
+　　│ 　└- root.tsx
+　　├- node_modules/
+　　├- public/
+　　│ 　└- favicon.ico
+　　├- .eslintrc.cjs
+　　├- .gitignore
+　　├- package-lock.json
+　　├- package.json
+　　├- README.md
+　　├- tsconfig.json
+　　└- vite.config.ts
+```
+
 # Storybook の導入
 
 ## インストール
+
+下記のコマンドで Storybook をインストールします。
 
 ```
 $ docker-compose exec app npx storybook@latest init
@@ -69,7 +102,7 @@ export default defineConfig(({ mode }) => {
 
 `app/.storybook/main.ts` を修正して、さっき作った `vite.storybook.config.ts` を読み込むように変更します。  
 
-```ts:main.ts
+```ts:app/.storybook/main.ts
 import type { StorybookConfig } from "@storybook/react-vite";
 
 const config: StorybookConfig = {
@@ -118,3 +151,5 @@ $ docker-compose exec app npm run storybook
 
 この記事では、Storybookのインストールから表示までを行いました。  
 次の記事ではMUIのインストールから表示までを行います。  
+
+https://zenn.dev/akkey247/articles/20240417_remix_environment_construction_3
