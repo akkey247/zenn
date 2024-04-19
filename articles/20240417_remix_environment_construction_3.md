@@ -91,7 +91,7 @@ $ docker-compose exec app npm run dev
 
 `localhost:3000` にアクセスしてみると下記のように一瞬ボタンがちゃんと表示されるが、すぐ普通のボタンに変わってしまいます。  
 
-![](/images/20240417_remix_environment_construction_3__image1.png)
+![](/images/20240417_remix_environment_construction_3__image1.gif)
 
 ブラウザのコンソールを見ると下記のような感じのエラーが出てます。  
 
