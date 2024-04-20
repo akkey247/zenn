@@ -142,4 +142,4 @@ $ docker-compose exec app npm run dev
 この記事では、MUIのテーマの設定とアプリバーの表示までを行いました。  
 次の記事ではコンポーネントの作成・使用までを行います。  
 
-https://zenn.dev/akkey247/articles/20240417_remix_environment_construction_5
+https://zenn.dev/akkey247/articles/20240420_remix_environment_construction_5
