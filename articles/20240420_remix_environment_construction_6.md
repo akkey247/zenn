@@ -12,7 +12,7 @@ published: true
 ちなみに React 初心者なので変なところあったら指摘お願いします。  
 
 この記事は下記の記事からの続きです。  
-https://zenn.dev/akkey247/articles/20240417_remix_environment_construction_4
+https://zenn.dev/akkey247/articles/20240420_remix_environment_construction_5
 
 ※ コンポーネントの作成自体は前回の記事でやっているのでそっちを参考にしてください
 
