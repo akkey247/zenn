@@ -9,14 +9,15 @@ published: true
 # はじめに
 
 この記事は、Docker上に Remix + Storybook + MUI の環境を構築する手順をまとめています。  
+ちなみに React 初心者なので変なところあったら指摘お願いします。  
 
 この記事は下記の記事からの続きです。  
 https://zenn.dev/akkey247/articles/20240417_remix_environment_construction_3
 
 # 現在の状態
 
-前の記事では、MUIをインストールを行いました。  
-現在下記のようなファイル構成となっています。(RemixやStorybookのバージョンなどによっても違うかも)  
+前の記事で、MUIをインストールを行いました。  
+現在下記のようなファイル構成となってます。(RemixやStorybookのバージョンなどによっても違うかも)  
 `myapp` ディレクトリがコンテナと同期しているディレクトリで Remix, Storybook のルートディレクトリになっています。  
 基本 `myapp` の中の操作になるのでファイルパスを書くときは `myapp` は無視してます。  
 

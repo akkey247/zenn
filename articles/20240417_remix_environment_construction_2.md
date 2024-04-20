@@ -9,6 +9,7 @@ published: true
 # はじめに
 
 この記事は、Docker上に Remix + Storybook + MUI の環境を構築する手順をまとめています。  
+ちなみに React 初心者なので変なところあったら指摘お願いします。  
 
 この記事は下記の記事からの続きです。  
 https://zenn.dev/akkey247/articles/20240417_remix_environment_construction_1
@@ -18,8 +19,8 @@ https://zenn.dev/m_ryosuke/articles/868eacfc1870c0
 
 # 現在の状態
 
-前の記事では、Dockerコンテナの作成とコンテナ内にRemixをインストールを行いました。  
-現在下記のようなファイル構成となっています。(Remixのバージョンなどによっても違うかも)  
+前の記事で、Dockerコンテナの作成とコンテナ内にRemixをインストールを行いました。  
+現在下記のようなファイル構成となってます。(Remixのバージョンなどによっても違うかも)  
 `myapp` ディレクトリがコンテナと同期しているディレクトリで Remix のルートディレクトリになっています。  
 基本 `myapp` の中の操作になるのでファイルパスを書くときは `myapp` は無視してます。  
 
@@ -49,7 +50,7 @@ https://zenn.dev/m_ryosuke/articles/868eacfc1870c0
 
 ## インストール
 
-下記のコマンドで Storybook をインストールします。
+下記のコマンドで Storybook をインストールします。  
 
 ```
 $ docker-compose exec app npx storybook@latest init
@@ -58,7 +59,7 @@ $ docker-compose exec app npx storybook@latest init
 ## Storybook　起動時のエラーを解消する
 
 Storybook をインストールするとインストール完了と同時に Storybook が自動で起動しますが、その際に下記のようなエラーが発生します。  
-(`Error: The Remix Vite plugin requires the use of a Vite config file` の部分)
+(`Error: The Remix Vite plugin requires the use of a Vite config file` の部分)  
 
 ```
 Running Storybook
