@@ -45,7 +45,7 @@ https://zenn.dev/m_ryosuke/articles/868eacfc1870c0
 　　└- vite.config.ts
 ```
 
-# Storybook の導入
+# 1. Storybook の導入
 
 ## インストール
 

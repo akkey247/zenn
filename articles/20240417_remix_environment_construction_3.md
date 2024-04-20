@@ -1,6 +1,6 @@
 ---
 title: "Remix環境構築③: MUIのインストール～表示まで"
-emoji: "😸"
+emoji: "😺"
 type: "tech"
 topics: [Remix,MUI]
 published: true
@@ -46,7 +46,7 @@ https://zenn.dev/akkey247/articles/20240417_remix_environment_construction_2
 　　└- vite.storybook.config.ts
 ```
 
-# MUI の導入
+# 1. MUI の導入
 
 ## インストール
 
@@ -89,7 +89,7 @@ $ docker-compose exec app npm run dev
 
 ## 表示を確認
 
-`localhost:3000` にアクセスしてみると下記のように一瞬ボタンがちゃんと表示されるが、すぐ普通のボタンに変わってしまいます。  
+`localhost:3000` にアクセスしてみると下記のように一瞬ボタンがちゃんと表示されるますが、すぐ普通のボタンに変わってしまいます。  
 
 ![](/images/20240417_remix_environment_construction_3__image1.gif)
 
@@ -107,11 +107,16 @@ Uncaught Error: Hydration failed because the initial UI does not match what was 
 Error: Hydration failed because the initial UI does not match what was rendered on the server.
 ```
 
-これは、サーバー側とクライアント側でHTMLの構成が変わっているというエラーらしいので、これを解消していく。  
+これは、サーバー側とクライアント側でHTMLの構成が変わっているというエラーらしいです。  
+これを解消します。  
 
-# ハイドレーションエラーを解消する
+https://zenn.dev/hisasann/articles/what-is-hidration
 
-## entry.client.tsx を変更
+# 2. ハイドレーションエラーを解消する
+
+## `entry.client.tsx` を修正
+
+`app/entry.client.tsx` を下記のように修正します。  
 
 ```tsx:app/entry.client.tsx
 /**
@@ -144,13 +149,22 @@ startTransition(() => {
 });
 ```
 
+__[補足]__
+
+キャッシュを利用することでハイドレーションエラーを解消してます。  
+ハイドレーションエラーの解消については他にも方法があると思いますが、手っ取り早い方法っぽいのでこれを採用しています。  
+キャッシュを使用することで他に問題が出る場合は他の方法で解消することを検討した方が良いかも。  
+まだ厳密には理解しきれてないので説明が間違っているところがあるかもしれないです。  
+
 ## 再び表示を確認
 
-`localhost:3000` にアクセスしてみると下記のようにちゃんとボタンが表示される。エラーも解消されている。  
+`localhost:3000` にアクセスしてみると下記のようにちゃんとボタンが表示されます。エラーも解消されています。  
 
 ![](/images/20240417_remix_environment_construction_3__image2.png)
 
 # 次の記事へ
 
-この記事では、Storybookのインストールから表示までを行いました。  
-次の記事ではMUIのインストールから表示までを行います。  
+この記事では、MUIのインストールから表示までを行いました。  
+次の記事ではMUIでテーマの設定とアプリバーの表示までを行います。  
+
+https://zenn.dev/akkey247/articles/20240420_remix_environment_construction_4
