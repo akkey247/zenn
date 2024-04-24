@@ -57,9 +57,8 @@ $ docker-compose exec app npm add -D sass
 
 # 2. コンポーネントの作成
 
-## `app/components/MyModal/index.tsx` を作成
+## コンポーネントの `index.tsx` を作成
 
-コンポーネントを作成します。  
 `app/components/MyModal/index.tsx` というファイルを下記のように作成します。  
 ボタンを押すとモーダルウィンドウが表示されるというコンポーネントです。  
 
@@ -98,7 +97,7 @@ __[補足]__
 - `MyModal` がコンポーネントの名前となります。
 - React のコンポーネントは、このように `MyModal/index.tsx` のようにコンポーネント名のディレクトリの配下に `index.tsx` というファイルを作る方法と、 `MyModal.tsx` というファイルを作る方法の２通りがあるみたいです。
 
-## `app/components/MyModal/styles.module.scss` を作成
+## コンポーネントのCSSを作成
 
 `app/components/MyModal/styles.module.scss` を下記のように作成します。  
 
@@ -125,8 +124,6 @@ __[補足]__
 
 # 3. コンポーネントの使用
 
-## `app/routes/_index.tsx` を修正
-
 `app/routes/_index.tsx` を下記のように修正します。  
 
 ```tsx:app/routes/_index.tsx
@@ -151,6 +148,10 @@ __[補足]__
 
 - `~/components/MyModal` のようにディレクトリを指定すればそのディレクトリのコンポーネントを使えます。
 - `~` は `tsconfig.json` で設定されていますが、 `~` が `app/` を表すエイリアスになっています。
+
+# 4. 動作確認
+
+一旦うまくいっているかの確認のために Remix を起動して確認してみます。  
 
 ## Remix を起動
 

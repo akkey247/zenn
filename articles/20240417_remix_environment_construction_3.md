@@ -57,7 +57,7 @@ https://zenn.dev/akkey247/articles/20240417_remix_environment_construction_2
 $ docker-compose exec app npm add @mui/material @mui/icons-material @emotion/styled @emotion/react
 ```
 
-## `app/routes/_index.tsx` を修正
+# 2. MUI の使用
 
 試しにMUIのボタンを配置してみます。  
 `app/routes/_index.tsx` を下記のように修正します。  
@@ -79,6 +79,10 @@ export default function Index() {
   );
 }
 ```
+
+# 3. 動作確認
+
+一旦うまくいっているかの確認のために Remix を起動して確認してみます。  
 
 ## Remix を起動
 
@@ -113,7 +117,7 @@ Error: Hydration failed because the initial UI does not match what was rendered 
 
 https://zenn.dev/hisasann/articles/what-is-hidration
 
-# 2. ハイドレーションエラーを解消する
+# 4. ハイドレーションエラーを解消する
 
 ## `entry.client.tsx` を修正
 
@@ -157,7 +161,11 @@ __[補足]__
 キャッシュを使用することで他に問題が出る場合は他の方法で解消することを検討した方が良いかも。  
 まだ厳密には理解しきれてないので説明が間違っているところがあるかもしれないです。  
 
-## 再び表示を確認
+# 5. 動作確認
+
+再度、うまくいっているか確認してみます。  
+
+## 表示を確認
 
 `localhost:3000` にアクセスしてみると下記のようにちゃんとボタンが表示されます。エラーも解消されています。  
 

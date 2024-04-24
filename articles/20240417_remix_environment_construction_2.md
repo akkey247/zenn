@@ -133,9 +133,12 @@ const config: StorybookConfig = {
 export default config;
 ```
 
-## Storybook を起動
+# 2. 動作確認
 
 一旦うまくいっているかの確認のために Storybook を起動して確認してみます。  
+
+## Storybook を起動
+
 下記のコマンドで Storybook を起動します。  
 
 ```

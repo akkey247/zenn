@@ -53,9 +53,9 @@ https://zenn.dev/akkey247/articles/20240420_remix_environment_construction_5
 　　└- vite.storybook.config.ts
 ```
 
-# Storybookへの追加
+# 1. コンポーネントをStorybookへ追加
 
-## `app/components/MyModal/MyModal.stories.ts` を作成
+## ストーリーファイルを作成
 
 `app/components/MyModal/MyModal.stories.ts` というファイルを下記のように作成します。  
 
@@ -82,10 +82,10 @@ export const Primary: Story = {
 };
 ```
 
-## `.storybook/main.ts` を修正
+## Storybookの `main.ts` を修正
 
 `.storybook/main.ts` を下記のように修正します。  
-`stories` の設定を `["../app/components/**/*.stories.@(js|jsx|mjs|ts|tsx)"]` に修正します。  
+`stories` の設定を `["../app/components/**/*.stories.@(js|jsx|mjs|ts|tsx)"]` のように修正します。  
 
 ```ts:.storybook/main.ts
 import type { StorybookConfig } from "@storybook/react-vite";
@@ -120,6 +120,10 @@ __[補足]__
 
 - `stories` の部分で指定したパスからコンポーネントが読み込まれます。
 
+# 2. 動作確認
+
+一旦うまくいっているかの確認のために Storybook を起動して確認してみます。  
+
 ## Storybook を起動
 
 下記のコマンドで Storybook を起動します。  
@@ -134,9 +138,10 @@ $ docker-compose exec app npm run storybook
 
 ![](/images/20240420_remix_environment_construction_6__image1.png)
 
-## `stories` ディレクトリを削除
+# 3. デフォルトのコンポーネントディレクトリを削除
 
-必要が無ければStorybookのデフォルトコンポーネントが入っている `stories` ディレクトリは削除する。  
+必要が無ければ `stories` ディレクトリを削除します。  
+`stories` はStorybookインストール時に自動で作成されるサンプルのコンポーネントディレクトリなので使わなければ削除して大丈夫です。  
 
 # おわりに
 
