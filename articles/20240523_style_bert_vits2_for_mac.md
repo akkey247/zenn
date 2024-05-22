@@ -12,7 +12,7 @@ published: true
 結果的に Dockerfile と docker-compose.yml を書いて起動するだけのお手軽構成でいけました。
 学習はできませんが、音声合成を試してみることが可能です。Macで試したい方はぜひ。
 
-# Dockerfile
+# Dockerfile を作成
 
 下記の内容で `Dockerfile` を作成する。
 
@@ -40,7 +40,7 @@ RUN python -m venv venv && \
     python initialize.py
 ```
 
-# docker-compose.yml
+# docker-compose.yml を作成
 
 下記の内容で `docker-compose.yml` を作成する。
 
@@ -48,8 +48,6 @@ RUN python -m venv venv && \
 services:
   app:
     build: .
-    volumes:
-      - .:/work
     ports:
       - "8000:8000"
     command: bash -c ". venv/bin/activate && python server_editor.py --inbrowser --device cpu"
