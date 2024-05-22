@@ -63,9 +63,6 @@ $ docker-compose.yml up
 
 起動したら `localhost:8000` にアクセスすれば Style-Bert-VITS2 を使うことができます。
 
-最初は「こんにちは」くらいの短いテキストで試してみることをお勧めします。
-自分の場合「おはようございます。良い天気ですね。」みたいなテキストを書いたら数分待たされたので。。
-
 # 参考記事
 
 [litagin02/Style-Bert-VITS2](https://github.com/litagin02/Style-Bert-VITS2/blob/master/README.md)  
